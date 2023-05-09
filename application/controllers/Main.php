@@ -29,15 +29,16 @@ class Main extends CI_Controller {
             /*============= CHECKING THE PHONE NUMBER IS ALREADY EXISTS OR NOT =========*/
             $check_phone = $this->MainM->check_user('users',array('phone' => $this->input->post('phone')));
             if($check_phone == false){ $msg = 'PHONE NUMBER ALREADY REGISTERED';}
- 
+           
+            $csrf_token = $this->input->post($this->security->get_csrf_token_name()); 
+            if ($csrf_token !== null && !hash_equals($csrf_token, $this->security->get_csrf_hash())){ $cvalid = false; $msg = 'The action you requested is not allowed.';}else{$cvalid = true;}
+
+
 
             $fvalid = $this->form_validation->run();
             if(!$fvalid){ $msg = validation_errors(); }
             if($fvalid){ $valid = true; }else{ $valid = false; }
-            if($valid && $check_email && $check_phone){
-                // echo '<pre>';
-                // print_r($_POST);
-                // echo '</pre>';
+            if($valid && $check_email && $check_phone && $cvalid){ 
                 $data = array(
                    'fname' => $this->input->post('fname'),
                    'lname' => $this->input->post('lname'),
