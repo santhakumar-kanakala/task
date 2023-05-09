@@ -36,9 +36,7 @@
 	   = last name
 	   = email
 	   = phone
-	   = skills
-
-	- SEND MAIL TO THE REGISTERED USER
+	   = skills 
 
 	- pages
 	   = registeration 
