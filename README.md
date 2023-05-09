@@ -57,7 +57,7 @@
 
 
 # POSTMAN COLLECTION
-	https://api.postman.com/collections/18055054-4cdf3cc6-0dcd-4bbb-b75d-12dd038bffef?access_key=PMAT-01GZZ7FHVEXB4WTXYDS5Q44F2D
+	https://www.postman.com/blue-star-418558/workspace/task/collection/18055054-4cdf3cc6-0dcd-4bbb-b75d-12dd038bffef?action=share&creator=18055054
 
 	Basic Auth :  
 	  username : beastman
