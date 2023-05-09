@@ -2,8 +2,8 @@
 
 # DATABASE SETUP
 
-  1 create a database task
-  2 import the database file to task
+	  1 create a database task
+	  2 import the database file to task
 
 
 # GITHUB SETUP COMMANDS
