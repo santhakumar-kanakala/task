@@ -8,8 +8,11 @@ $route['list'] = 'main/list';
 $route['trash'] = 'main/trash';
 
 
-$route['api/users'] = 'api/apiu/index_get';
-$route['api/users/add'] = 'api/apiu/createUser_post';
+$route['api/users'] = 'api/apiu/index';
+$route['api/users/add'] = 'api/apiu/createUser';
+$route['api/users/edit/(:any)'] = 'api/apiu/editUser/$1';
+$route['api/users/update/(:any)'] = 'api/apiu/updateUser/$1';
+$route['api/users/delete'] = 'api/apiu/userDelete';
  
 
 $route['404_override'] = '';
